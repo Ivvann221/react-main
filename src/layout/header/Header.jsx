@@ -1,22 +1,35 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import styles from './Header.module.css'
+// import image from './header/layout/img/Group.svg'
 
 const Header = () => {
     return (
         <>
-            <header className={styles.header}>header
-                <nav>
+        <div className="container">
+            <div className="row">
+            <header className={styles.header}>
+                <div className={styles.header__logo}>
+                <img src="{image}" alt="img"/>
+                </div>
+                <div className={styles.header__menu}>
                     <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
+                        <li><Link>Про нас</Link></li>
+                        <li><Link>Дослідження</Link></li>
+                        <li><Link>Тренди</Link></li>
+                        <li><Link>Контакти</Link></li>
+                        <li><Link>Підтримати</Link></li>
                     </ul>
-                </nav>
+                </div>
+                <div className={styles.header__search}>
+                    <input type="text" placeholder='search'/>
+                </div>
+                <div className={styles.language}>
+                    <p>UA</p>
+                </div>
             </header>
+            </div>
+        </div>
         </>
 
     )
